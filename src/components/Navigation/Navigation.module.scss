@@ -1,0 +1,12 @@
+@import '../../styles/main.scss';
+
+.list {
+  display: flex;
+  gap: 30px;
+
+  & .link {
+    font-size: 20px;
+
+    @extend %underline;
+  }
+}

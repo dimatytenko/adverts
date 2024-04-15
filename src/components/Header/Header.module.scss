@@ -1,0 +1,12 @@
+@import '../../styles/main.scss';
+
+.header {
+  padding: 30px 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
