@@ -1,15 +1,18 @@
-import { Outlet } from 'react-router-dom';
-
 import { useAdvert } from '../../hooks/advert';
+import CatalogComponent from '../../components/Catalog';
 
 const Catalog = () => {
-  const { handlePageChange } = useAdvert();
+  const { adverts, handlePageChange, handleFavoriteChange, isCanLoadMore, loading } = useAdvert();
+
+  if (loading) return null;
 
   return (
-    <div>
-      <h1>Catalog</h1>
-      <Outlet />
-    </div>
+    <CatalogComponent
+      adverts={adverts}
+      handlePageChange={handlePageChange}
+      handleFavoriteChange={handleFavoriteChange}
+      isCanLoadMore={isCanLoadMore}
+    />
   );
 };
 

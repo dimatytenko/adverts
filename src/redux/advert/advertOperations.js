@@ -18,6 +18,22 @@ export const getAdverts = createAsyncThunk(
   },
 );
 
+export const loadMoreAdverts = createAsyncThunk(
+  'advert/loadMoreAdverts',
+  async (credentials, { rejectWithValue }) => {
+    try {
+      const response = await advertsApi.getAdverts(credentials);
+      return response;
+    } catch (error) {
+      if (error.response && error.response.data) {
+        return rejectWithValue(error.response.data);
+      } else {
+        return rejectWithValue({ message: error.message });
+      }
+    }
+  },
+);
+
 export const getFavoriteAdverts = createAsyncThunk(
   'advert/getFavoriteAdverts',
   async (_, { rejectWithValue, getState }) => {

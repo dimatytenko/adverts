@@ -1,11 +1,18 @@
-import React from 'react';
+import FavoritesComponent from '../../components/Favorites';
 
 import { useFavoriteAdverts } from '../../hooks/advert';
 
 const Favorites = () => {
-  useFavoriteAdverts();
+  const { favoriteAdverts, handleFavoriteChange, loading } = useFavoriteAdverts();
 
-  return <div>Favorites</div>;
+  if (loading) return null;
+
+  return (
+    <FavoritesComponent
+      favoriteAdverts={favoriteAdverts}
+      handleFavoriteChange={handleFavoriteChange}
+    />
+  );
 };
 
 export default Favorites;

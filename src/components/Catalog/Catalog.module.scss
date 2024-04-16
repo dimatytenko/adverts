@@ -1,0 +1,12 @@
+@import '../../styles/main.scss';
+
+.wrapper {
+  @extend %wrapper;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
