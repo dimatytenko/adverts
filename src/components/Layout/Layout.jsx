@@ -9,6 +9,7 @@ const LayoutComponent = ({ header, footer, children, hideHeader, hideFooter }) =
       <main className={styles.main}>
         <Container>{children}</Container>
       </main>
+
       {!hideFooter && footer}
     </div>
   );

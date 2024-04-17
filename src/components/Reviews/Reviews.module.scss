@@ -1,0 +1,48 @@
+@import '../../styles/main.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item_top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item_avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $--features-color;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $--button-color;
+}
+
+.item_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item_name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: $--main-color;
+}

@@ -1,6 +1,6 @@
 //colors
 $--bg-color: #ffffff;
-$--white: #ffffff;
+$--white-color: #ffffff;
 $--inputs-color: #f7f7f7;
 $--features-color: #f2f4f7;
 $--text-color: #475467;
@@ -8,7 +8,10 @@ $--rating-color: #ffc531;
 $--button-color: #e44848;
 $--button-hover-color: #8d0c0c;
 $--main-color: #101828;
-$--border: rgba(16, 24, 40, 0.2);
+$--border-color: rgba(16, 24, 40, 0.2);
+$--grey-color: rgba(16, 24, 40, 0.6);
+$--scrolbar-color: #d9d9d9;
+$--loader-color: #3498db;
 
 // transition
 $--transition: 0.3s ease-in-out;

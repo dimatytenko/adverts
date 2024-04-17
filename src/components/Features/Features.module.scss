@@ -1,0 +1,39 @@
+@import '../../styles/main.scss';
+
+.vehicle_details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vehicle_details_title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $--main-color;
+}
+
+.devider {
+  width: 100%;
+  height: 1px;
+  background-color: $--border-color;
+}
+
+.vehicle_details_list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  & .vehicle_details_item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    & .vehicle_details_text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.33;
+      color: $--main-color;
+    }
+  }
+}

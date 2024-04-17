@@ -1,0 +1,33 @@
+@import '../../styles/main.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid $--border-color;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $--main-color;
+  margin-bottom: 8px;
+}
+
+.text {
+  margin-bottom: 24px;
+}
+
+.button {
+  margin-top: 24px;
+}
+
+.form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: space-between;
+}

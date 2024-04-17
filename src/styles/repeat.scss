@@ -27,3 +27,27 @@
     width: 100%;
   }
 }
+
+%scrollbar {
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $--scrolbar-color;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $--scrolbar-color;
+  }
+
+  &::-webkit-resizer {
+    display: none;
+  }
+}

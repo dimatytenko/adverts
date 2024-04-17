@@ -1,0 +1,87 @@
+@import '../../styles/main.scss';
+
+.details_wrapper {
+  height: 100%;
+  padding: 40px 16px 40px 40px;
+}
+
+.details_content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.details_content_top {
+  margin-bottom: 24px;
+}
+
+.details_info {
+  margin: 10px 0 16px;
+}
+
+.details_images {
+  display: flex;
+  gap: 16px;
+  margin-bottom: px;
+
+  & .image {
+    width: 290px;
+    height: 310px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $--main-color;
+}
+
+.scroll_content {
+  overflow: auto;
+  height: calc(100% - 140px);
+  padding-right: 16px;
+
+  @extend %scrollbar;
+}
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  margin: 44px 0;
+  border-bottom: 1px solid $--border-color;
+
+  & .tab {
+    position: relative;
+    top: 2.5px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $--main-color;
+    cursor: pointer;
+    padding-bottom: 24px;
+
+    &.active {
+      border-bottom: 5px solid $--button-color;
+    }
+  }
+}
+
+.tab_content {
+  display: flex;
+  gap: 24px;
+
+  & .tab_content_left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+}

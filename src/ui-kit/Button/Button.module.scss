@@ -8,7 +8,7 @@
 
   font-weight: 500;
   letter-spacing: -0.08px;
-  color: $--white;
+  color: $--white-color;
   transition: all $--transition;
 
   &:hover,
@@ -19,7 +19,7 @@
   &.secondary {
     padding: 16px 32px;
     border-radius: 200px;
-    border: 1px solid $--border;
+    border: 1px solid $--border-color;
     background-color: transparent;
     color: $--main-color;
 
@@ -27,5 +27,11 @@
     &:focus {
       border-color: $--button-color;
     }
+  }
+
+  &:disabled {
+    background-color: $--inputs-color;
+    color: $--text-color;
+    cursor: not-allowed;
   }
 }

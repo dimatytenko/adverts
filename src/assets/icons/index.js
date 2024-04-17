@@ -18,6 +18,8 @@ import Shower from './categories/shower.svg?react';
 import Toilet from './categories/toilet.svg?react';
 import Transmission from './categories/transmission.svg?react';
 import Water from './categories/water.svg?react';
+import Close from './close.svg?react';
+import Calendar from './calendar.svg?react';
 
 export {
   Van,
@@ -40,4 +42,6 @@ export {
   Toilet,
   Transmission,
   Water,
+  Close,
+  Calendar,
 };

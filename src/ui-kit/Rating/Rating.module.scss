@@ -1,0 +1,21 @@
+@import '../../styles/main.scss';
+
+.rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+
+  & > svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.active path {
+    fill: $--rating-color;
+    stroke: $--rating-color;
+  }
+}
