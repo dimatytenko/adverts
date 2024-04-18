@@ -2,6 +2,8 @@
 
 .wrapper {
   @extend %wrapper;
+  display: flex;
+  gap: 64px;
 }
 
 .button {

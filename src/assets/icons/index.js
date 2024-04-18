@@ -1,4 +1,6 @@
 import Van from './vehicle/van.svg?react';
+import Fully from './vehicle/fully.svg?react';
+import Alcove from './vehicle/alcove.svg?react';
 import Heart from './heart.svg?react';
 import Location from './location.svg?react';
 import Star from './star.svg?react';
@@ -18,11 +20,14 @@ import Shower from './categories/shower.svg?react';
 import Toilet from './categories/toilet.svg?react';
 import Transmission from './categories/transmission.svg?react';
 import Water from './categories/water.svg?react';
+import Tv from './categories/tv.svg?react';
 import Close from './close.svg?react';
 import Calendar from './calendar.svg?react';
 
 export {
   Van,
+  Fully,
+  Alcove,
   Heart,
   Location,
   Star,
@@ -44,4 +49,5 @@ export {
   Water,
   Close,
   Calendar,
+  Tv,
 };

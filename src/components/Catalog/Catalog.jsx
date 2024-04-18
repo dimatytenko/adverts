@@ -1,19 +1,38 @@
 import styles from './Catalog.module.scss';
-import AdvertList from '../AdvertList';
 import { Button } from '../../ui-kit';
+import AdvertList from '../AdvertList';
+import Sidebar from '../Sidebar';
 
-const CatalogComponent = ({ adverts, handleFavoriteChange, handlePageChange, isCanLoadMore }) => {
+const CatalogComponent = ({
+  adverts,
+  handleFavoriteChange,
+  handlePageChange,
+  isCanLoadMore,
+  serchData,
+}) => {
   return (
     <div className={styles.wrapper}>
-      <AdvertList list={adverts} handleFavoriteChange={handleFavoriteChange} />
+      <Sidebar
+        searchValue={serchData.searchValue}
+        onSearchChange={serchData.handleSearch}
+        equipment={serchData.equipment}
+        onEquipmentChange={serchData.handleEquipment}
+        vehicle={serchData.vehicle}
+        onVehicleChange={serchData.handleSetVehicle}
+        onSearch={serchData.handleSearchSubmit}
+      />
 
-      {isCanLoadMore && (
-        <div className={styles.button}>
-          <Button variant="secondary" onClick={handlePageChange}>
-            Load more
-          </Button>
-        </div>
-      )}
+      <div>
+        <AdvertList list={adverts} handleFavoriteChange={handleFavoriteChange} />
+
+        {isCanLoadMore && (
+          <div className={styles.button}>
+            <Button variant="secondary" onClick={handlePageChange}>
+              Load more
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

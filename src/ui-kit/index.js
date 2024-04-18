@@ -9,6 +9,7 @@ import Input from './Input/Input';
 import Textarea from './Input/Textarea';
 import Datepicker from './Input/Datepicker';
 import Loader from './Loader';
+import Checkbox from './Checkbox';
 
 export {
   Container,
@@ -22,4 +23,5 @@ export {
   Textarea,
   Datepicker,
   Loader,
+  Checkbox,
 };

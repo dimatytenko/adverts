@@ -88,3 +88,49 @@ const useFavoriteChange = () => {
     handleFavoriteChange,
   };
 };
+
+export const useSearch = () => {
+  const [searchValue, setSearchValue] = useState('Kyiv, Ukraine');
+  const [equipment, setEquipment] = useState([]);
+  const [vehicle, setVehicle] = useState('');
+
+  const handleSearch = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  const handleEquipment = (e) => {
+    if (equipment.includes(e.target.value)) {
+      setEquipment((prev) => prev.filter((item) => item !== e.target.value));
+      return;
+    }
+    setEquipment((prev) => [...prev, e.target.value]);
+  };
+
+  const handleSetVehicle = (e) => {
+    setVehicle(e.target.value);
+  };
+
+  const resetFilters = () => {
+    setSearchValue('Kyiv, Ukraine');
+    setEquipment([]);
+    setVehicle('');
+  };
+
+  const handleSearchSubmit = () => {
+    console.log('searchValue', searchValue);
+    console.log('equipment', equipment);
+    console.log('vehicle', vehicle);
+
+    resetFilters();
+  };
+
+  return {
+    searchValue,
+    handleSearch,
+    equipment,
+    handleEquipment,
+    vehicle,
+    handleSetVehicle,
+    handleSearchSubmit,
+  };
+};
